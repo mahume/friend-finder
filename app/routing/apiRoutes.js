@@ -1,14 +1,22 @@
-const data = require('../data/friends')
+const express = require('express')
+const router = express.Router()
+const friendsData = require('../data/friends')
 
-module.exports = app => {
-    app.get('api/friends', (req, res) => {
-        res.json(data)
-    })
-    app.post('api/friends', (req, res) => {
-        console.log(req.body)
-    })
-}
+router.get('/api/friends', (req, res) => {
+    res.json(friendsData)
+})
 
+router.post('/api/friends', (req, res) => {
+    console.log(req.body)
+    console.log(res)
+    friendsData.push(req.body)
+
+
+
+})
+
+module.exports = router
+/*
 const testAnswers1 = [5, 5, 2, 4, 1, 2, 4, 1, 2, 4]
 const testAnswers2 = [1, 2, 3, 4, 2, 2, 5, 3, 1, 4]
 
@@ -18,3 +26,4 @@ function totalDifference(arr1, arr2) {
     console.log(Math.abs(arr1Sum - arr2Sum))
 }
 totalDifference(testAnswers1, testAnswers2)
+*/
