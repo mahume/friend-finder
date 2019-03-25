@@ -156,7 +156,7 @@
                     <p><span id="newFriendDesc"></span></p>
                 </div>
                 <div class="modal-footer">
-                    <button id="modalClose" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary close" data-dismiss="modal">Close</button>
                 </div>
                 </div>
             </div>
@@ -200,6 +200,9 @@ $(document).ready(() => {
             $('#newFriendDesc').text(data.desc)
             $('#newFriendDisplay').modal('show')
         })
+    })
+    $('.close').on('click', () => {
+        location.reload()
     })
 })
 </script>
