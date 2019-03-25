@@ -1,9 +1,11 @@
 const apiRoutes = require('./app/routing/apiRoutes')
 const htmlRoutes = require('./app/routing/htmlRoutes')
+
 const bodyParser = require('body-parser')
 const path = require('path')
 const express = require('express')
 const app = express()
+
 const PORT = process.env.PORT || 8080
 
 app.use(bodyParser.urlencoded({ extended: true }))

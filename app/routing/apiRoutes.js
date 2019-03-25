@@ -1,9 +1,10 @@
+const friends = require('../data/friends')
+
 const express = require('express')
 const router = express.Router()
-const friendsData = require('../data/friends')
 
 router.get('/api/friends', (req, res) => {
-    res.json(friendsData)
+    res.json(friends)
 })
 
 router.post('/api/friends', (req, res) => {
@@ -12,16 +13,14 @@ router.post('/api/friends', (req, res) => {
     let bestScore = 40
     let newFriend
     
-    for (let i = 0; i < friendsData.length; i++) {
-        const currentScore = totalDifference(friendsData[i].scores, userScores)
-        
+    for (let i = 0; i < friends.length; i++) {
+        const currentScore = totalDifference(friends[i].scores, userScores)
         if (currentScore <= bestScore) {
             bestScore = currentScore
-            newFriend = friendsData[i].name
+            newFriend = friends[i]
         }
     }
-    
-    console.log(`New Friend: ${newFriend}`)
+    res.send(newFriend)
 })
 
 function totalDifference(arr1, arr2) {
