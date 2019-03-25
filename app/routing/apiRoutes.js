@@ -8,6 +8,7 @@ router.get('/api/friends', (req, res) => {
 
 router.post('/api/friends', (req, res) => {
     const userScores = req.body
+    console.log(userScores)
     let bestScore = 40
     let newFriend
 
