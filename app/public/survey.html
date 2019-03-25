@@ -194,6 +194,7 @@ $(document).ready(() => {
             data: userInput
         })
         .then(data => {
+            console.log(data.photo)
             $('#newFriendName').text(data.name)
             $('#newFriendPhoto').attr('src', data.photo)
             $('#newFriendDesc').text(data.desc)
