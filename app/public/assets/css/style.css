@@ -1,12 +1,16 @@
-* {
+.homeContainer {
     font-family: 'Sanchez', serif;
 }
-h1 {
+.homeContainer h1 {
     font-style: italic;
     color: rgba(226, 18, 40, 1);
     text-shadow: 2px 2px 1px black;
 }
-#startQuizBtn {
+.homeContainer .btn {
     background-color: rgba(252, 215, 66, 1);
 }
 
+#newFriendModal .btn:hover {
+    color: white;
+    font-weight: 500;
+} 

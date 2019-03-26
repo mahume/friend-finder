@@ -3,7 +3,6 @@ $(document).ready(() => {
         event.preventDefault()
         var userInput = {
             userName: $('#userName').val().trim(),
-            profilePic: $('#profilePic').val().trim(),
             surveyAnswers: [
                 $('#question1').val(),
                 $('#question2').val(),
@@ -23,11 +22,11 @@ $(document).ready(() => {
             data: userInput
         })
         .then(data => {
-            console.log(data.photo)
+            $('#userNameDisplay').text(userInput.userName)
             $('#newFriendName').text(data.name)
             $('#newFriendPhoto').attr('src', data.photo)
             $('#newFriendDesc').text(data.desc)
-            $('#newFriendDisplay').modal('show')
+            $('#newFriendModal').modal('show')
         })
     })
     $('.close').on('click', () => {

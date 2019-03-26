@@ -5,21 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Survey</title>
+    <link href="https://fonts.googleapis.com/css?family=Sanchez:400,400i" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <div>
-        <h1>Survey Questions</h1>
+    <div class="container shadow-lg pb-4">
+        <h1 class="text-center my-4">Survey Questions</h1>
         <form>
             <div class="form-group">
                 <label for="userName">Name</label>
                 <input type="text" class="form-control" id="userName" placeholder="John Doe" required="true">
             </div>
-            <div class="form-group">
-                <label for="profilePic">Link to picture</label>
-                <input type="text" class="form-control" id="profilePic" placeholder="http://www.picture.of/me" required="true">
-            </div>
+            <hr class="my-4">
             <div class="form-group">
                 <h5 for="question1">Question 1</h5>
                 <label for="question1">Are you a good dancer?</label>
@@ -128,7 +126,7 @@
                     <option value="5">Five (Agree)</option>
                 </select>
             </div>
-            <div class="form-group">
+            <div class="form-group mb-4">
                 <h5 for="question10">Question 10</h5>
                 <label for="question10">Are you a funny person?</label>
                 <select class="custom-select mr-sm-2" id="question10" required>
@@ -140,25 +138,27 @@
                     <option value="5">Five (Agree)</option>
                 </select>
             </div>
-            <button id="submit" class="btn-primary" type="submit" data-toggle="modal">Submit Survey</button>
+            <div>
+                <button id="submit" class="btn-primary btn-lg btn-block" type="submit" data-toggle="modal">Submit Survey</button>
+            </div>
         </form>
         <!-- Modal -->
-        <div id="newFriendDisplay" class="modal" tabindex="-1" role="dialog">
+        <div id="newFriendModal" class="modal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Your new best friend is <span id="newFriendName"></span></h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <img id="newFriendPhoto" src="" alt="new-friend-image">
-                    <p><span id="newFriendDesc"></span></p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary close" data-dismiss="modal">Close</button>
-                </div>
+                    <div class="modal-header">
+                        <h5 class="modal-title">Great news <span id="userNameDisplay"></span>! Your new best friend is <span id="newFriendName"></span>.</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <img id="newFriendPhoto" src="" alt="new-friend-image">
+                        <p><span id="newFriendDesc"></span></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger btn-block py-2 close" data-dismiss="modal">Close</button>
+                    </div>
                 </div>
             </div>
         </div>
