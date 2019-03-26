@@ -1,0 +1,12 @@
+* {
+    font-family: 'Sanchez', serif;
+}
+h1 {
+    font-style: italic;
+    color: rgba(226, 18, 40, 1);
+    text-shadow: 2px 2px 1px black;
+}
+#startQuizBtn {
+    background-color: rgba(252, 215, 66, 1);
+}
+
