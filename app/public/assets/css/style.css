@@ -14,3 +14,7 @@
     color: white;
     font-weight: 500;
 } 
+#newFriendPhoto {
+    width: 100%;
+    height: auto;
+}
