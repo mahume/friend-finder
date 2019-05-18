@@ -9,7 +9,15 @@
 .homeContainer .btn {
     background-color: rgba(252, 215, 66, 1);
 }
-
+#survey-title-container {
+    padding: 0;
+}
+#survey-header {
+    background: url(/assets/images/checkered.png);
+    font-style: italic;
+    font-size: 5rem;
+    text-shadow: 2px 2px 1px gray;
+}
 #newFriendModal .btn:hover {
     color: white;
     font-weight: 500;
