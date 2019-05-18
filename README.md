@@ -16,3 +16,7 @@ To take the quiz over at [Heroku](https://mahume-friend-finder.herokuapp.com/)
 - jQuery
 - Node
 - Express
+
+## Author
+
+[Mike Hume](https://mahume.github.io/)
