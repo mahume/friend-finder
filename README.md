@@ -10,9 +10,9 @@ This personality quiz will determine which character from the hit 90's sitcom "S
 
 To take the quiz over at [Heroku](https://mahume-friend-finder.herokuapp.com/)
 
-### Welcome screen
+## Built With
 
-Click the "Start Quiz" button to begin your 10 question assessment.
-
-
-### Quiz
+- Bootstrap
+- jQuery
+- Node
+- Express
